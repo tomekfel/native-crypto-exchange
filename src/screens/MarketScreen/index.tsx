@@ -5,14 +5,14 @@ import DATA from "../../../assets/marketcap.json";
 import styles from "./styles";
 
 const image = require("../../../assets/images/Saly-17-1.png");
-const marketCoins = DATA;
+const portfolioCoins = DATA;
 
 const MarketScreen = () => {
   return (
     <View style={styles.container}>
       <FlatList
         style={styles.list}
-        data={marketCoins}
+        data={portfolioCoins}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => <MarketCoin marketCoin={item} />}
         ListHeaderComponent={() => (
