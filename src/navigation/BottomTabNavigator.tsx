@@ -3,17 +3,20 @@
  * https://reactnavigation.org/docs/bottom-tab-navigator
  */
 
-import { Ionicons } from "@expo/vector-icons";
+import {
+  Ionicons,
+  Entypo,
+  AntDesign,
+  FontAwesome,
+  FontAwesome5,
+  MaterialIcons,
+} from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 // import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
-
-// import TabOneScreen from "../screens/TabOneScreen";
-// import TabTwoScreen from "../screens/TabTwoScreen";
-
 import HomeScreen from "../screens/HomeScreen";
 import MarketScreen from "../screens/MarketScreen";
 import PortfolioScreen from "../screens/PortfolioScreen";
@@ -37,7 +40,7 @@ export default function BottomTabNavigator() {
         component={HomeScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
+            <Entypo name="home" color={color} size={30} />
           ),
         }}
       />
@@ -46,7 +49,7 @@ export default function BottomTabNavigator() {
         component={MarketScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
+            <FontAwesome5 name="chart-line" color={color} size={30} />
           ),
         }}
       />
@@ -55,7 +58,7 @@ export default function BottomTabNavigator() {
         component={PortfolioScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
+            <AntDesign name="piechart" color={color} size={30} />
           ),
         }}
       />
@@ -64,7 +67,7 @@ export default function BottomTabNavigator() {
         component={ProfileScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
+            <FontAwesome name="user" color={color} size={30} />
           ),
         }}
       />
@@ -73,7 +76,7 @@ export default function BottomTabNavigator() {
         component={RankingsScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
+            <MaterialIcons name="leaderboard" color={color} size={30} />
           ),
         }}
       />
