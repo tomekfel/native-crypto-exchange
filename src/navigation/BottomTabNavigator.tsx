@@ -22,6 +22,7 @@ import MarketScreen from "../screens/MarketScreen";
 import PortfolioScreen from "../screens/PortfolioScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import RankingsScreen from "../screens/RankingsScreen";
+import CoinDetailsScreen from "../screens/CoinDetailsScreen";
 
 import { BottomTabParamList } from "../../types";
 

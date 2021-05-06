@@ -17,6 +17,8 @@ import { RootStackParamList } from "../../types";
 import BottomTabNavigator from "./BottomTabNavigator";
 import LinkingConfiguration from "./LinkingConfiguration";
 
+import CoinDetailsScreen from "../screens/CoinDetailsScreen";
+
 export default function Navigation({
   colorScheme,
 }: {
@@ -38,8 +40,17 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Root" component={BottomTabNavigator} />
+    <Stack.Navigator /*screenOptions={{ headerShown: false }}*/>
+      <Stack.Screen
+        name="Root"
+        component={BottomTabNavigator}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="CoinDetails"
+        component={CoinDetailsScreen}
+        options={{ title: "Price Data" }}
+      />
       <Stack.Screen
         name="NotFound"
         component={NotFoundScreen}
