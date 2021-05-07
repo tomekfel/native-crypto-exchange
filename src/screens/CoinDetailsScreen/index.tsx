@@ -1,14 +1,16 @@
 import React from "react";
 import { View, Text, Image, Pressable } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
+
 import PercentageChange from "../../components/PercentageChange";
+import CoinPriceGraph from "../../components/CoinPriceGraph";
 import styles from "./styles";
 import DATA from "../../../assets/marketcap.json";
 
 const CoinDetailsScreen = () => {
   const [coin, setCoin] = React.useState(DATA[0]);
   const [amount, setAmount] = React.useState(0.002);
-
+  const historyString = JSON.stringify(coin.price);
   const onBuy = () => {
     console.warn("buy");
   };
@@ -57,6 +59,8 @@ const CoinDetailsScreen = () => {
           </View>
         </View>
       </View>
+
+      <CoinPriceGraph dataString={historyString} />
 
       <View style={styles.row}>
         <Text>Position</Text>
