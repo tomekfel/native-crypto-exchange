@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, Image, Pressable } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 import PercentageChange from "../../components/PercentageChange";
 import CoinPriceGraph from "../../components/CoinPriceGraph";
@@ -8,6 +9,7 @@ import styles from "./styles";
 import DATA from "../../../assets/marketcap.json";
 
 const CoinDetailsScreen = () => {
+  const navigation = useNavigation();
   const [coin, setCoin] = React.useState(DATA[0]);
   const [amount, setAmount] = React.useState(0.002);
   const historyString = JSON.stringify(coin.price);
@@ -72,14 +74,18 @@ const CoinDetailsScreen = () => {
       <View style={[styles.row, { marginTop: "auto" }]}>
         <Pressable
           style={[styles.button, { backgroundColor: "green" }]}
-          onPress={onBuy}
+          onPress={() =>
+            navigation.navigate("CoinExchange", { isBuy: true, coin })
+          }
         >
           <Text style={styles.buttonText}>Buy</Text>
         </Pressable>
 
         <Pressable
           style={[styles.button, { backgroundColor: "red" }]}
-          onPress={onSell}
+          onPress={() =>
+            navigation.navigate("CoinExchange", { isBuy: false, coin })
+          }
         >
           <Text style={styles.buttonText}>Sell</Text>
         </Pressable>

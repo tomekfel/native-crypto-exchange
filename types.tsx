@@ -4,8 +4,11 @@
  */
 
 export type RootStackParamList = {
+  Welcome: undefined;
   Root: undefined;
   NotFound: undefined;
+  CoinExchange: undefined;
+  CoinDetails: undefined;
 };
 
 export type BottomTabParamList = {

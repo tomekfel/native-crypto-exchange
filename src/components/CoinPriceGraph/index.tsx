@@ -6,7 +6,6 @@ interface CoinPriceGraphProps {
   dataString: string;
 }
 const CoinPriceGraph = ({ dataString }: CoinPriceGraphProps) => {
-  // console.log("data", dataString);
   const data = JSON.parse(dataString);
   return (
     <View>
