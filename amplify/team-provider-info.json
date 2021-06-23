@@ -10,6 +10,17 @@
       "StackName": "amplify-cryptoexchange-dev-224841",
       "StackId": "arn:aws:cloudformation:eu-west-1:782058104707:stack/amplify-cryptoexchange-dev-224841/73cd9b10-d2da-11eb-baff-0a7e1bb3ccfd",
       "AmplifyAppId": "dkfttup2h4l6l"
+    },
+    "categories": {
+      "auth": {
+        "cryptoexchange96017f28": {}
+      },
+      "function": {
+        "cryptoexchange96017f28PostConfirmation": {
+          "deploymentBucketName": "amplify-cryptoexchange-dev-224841-deployment",
+          "s3Key": "amplify-builds/cryptoexchange96017f28PostConfirmation-66596d55554c5043796c-build.zip"
+        }
+      }
     }
   }
 }
